@@ -72,5 +72,5 @@ void Human::call_friends() const
 
 int Human::friends_count() const
 {
-    friends->size();
+    return friends->size();
 }
