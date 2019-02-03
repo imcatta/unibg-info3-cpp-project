@@ -38,14 +38,18 @@ class Dolphin : public WaterAnimal, public Mammal
 {
 public:
   Dolphin(const string &, const int);
-  int get_human_age() const;
+  int get_human_age() const override;
+  // The `override` keyword behaves like the `@Override()` annotation in java.
+  // In a member function declaration or definition, override ensures that
+  // the function is virtual and is overriding a virtual function from a base class.
+  // The program is ill-formed (a compile-time error is generated) if this is not true.
 };
 
 class Dog : public Mammal
 {
 public:
   Dog(const string &, const int);
-  int get_human_age() const;
+  int get_human_age() const override;
 };
 
 #endif
