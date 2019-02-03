@@ -44,6 +44,7 @@ private:
 
 public:
   Human(const string &, const int, const string &);
+  Human(const Human &); // copy constructor
   ~Human();
   void add_friend(const Human &);
   void remove_friend(const Human &);

@@ -47,6 +47,13 @@ Human::Human(const std::string &name, const int age, const std::string &phone_nu
     friends = new set<Human>;
 }
 
+Human::Human(const Human &other) : LivingBeing(other.name, other.age),
+                                   Mammal(other.name, other.age),
+                                   SmartPhone(other.phone_number)
+{
+    friends = new set<Human>(*other.friends);
+}
+
 Human::~Human()
 {
     delete friends;

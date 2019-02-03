@@ -7,7 +7,7 @@ using namespace std;
 
 class LivingBeing
 {
-private: // optional, "private" by default
+protected:
   string name;
   int age;
   friend ostream &operator<<(ostream &os, const LivingBeing &living_being);
